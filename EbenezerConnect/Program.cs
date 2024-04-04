@@ -1,4 +1,10 @@
+using EbenezerConnect.Services;
+using Microsoft.Extensions.DependencyInjection;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Services.AddScoped<UserService>(); // Registrando a UserService como serviço de escopo
 
 // Add services to the container.
 
@@ -17,7 +23,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
 
 app.MapControllers();
