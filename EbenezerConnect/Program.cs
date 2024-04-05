@@ -5,6 +5,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddScoped<UserService>(); // Registrando a UserService como serviço de escopo
+builder.Services.AddScoped<ProductService>(); // Registrando a UserService como serviço de escopo
+
 
 // Add services to the container.
 

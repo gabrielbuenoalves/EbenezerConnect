@@ -6,6 +6,8 @@ namespace EbenezerConnect.Data
     public class Connection : DbContext
     {
     public DbSet<Eb_User> Eb_User { get; set; } // Torna a propriedade pública
+    public DbSet<Eb_Products> Eb_Products { get; set; } // Torna a propriedade pública
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
